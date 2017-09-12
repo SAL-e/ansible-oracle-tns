@@ -1,8 +1,13 @@
 ---
 
+- name: "Copy TNS_ADMIN directory"
+  win_copy:
+    src: "{{ oracle_tns_src }}"
+    dest: "{{ oracle_tns_dest }}"
+
 - name: Set TNS_ADMIN environment varible.
   win_environment:
     name: TNS_ADMIN
-    value: C:\Oracle
+    value: "{{ oracle_tns_dest }}"
     level: machine
     state: present
