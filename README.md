@@ -1,7 +1,7 @@
-Role Name
-=========
+oracle-tns
+==========
 
-A brief description of the role goes here.
+Ansible role to set TNS_ADMIN environment.
 
 Requirements
 ------------
@@ -25,12 +25,12 @@ Including an example of how to use your role (for instance, with variables passe
 
     - hosts: servers
       roles:
-         - { role: username.rolename, x: 42 }
+         - { role: sal-e.oracle-tns, x: 42 }
 
 License
 -------
 
-BSD
+GPLv3
 
 Author Information
 ------------------
