@@ -1,5 +1,10 @@
 ---
 
+- name: "Create TNS_ADMIN directory"
+  win_file:
+    path: "{{ oracle_tns_dest }}"
+    state: directory
+
 - name: "Copy TNS_ADMIN directory"
   win_copy:
     src: "{{ oracle_tns_src }}"
